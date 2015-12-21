@@ -199,17 +199,17 @@ phina.namespace(function() {
                 if (mqoMat.tex) {
                     var tex = phina.asset.AssetManager.get("image", mqoMat.tex);
                     if (tex) {
-//                        mat.map = new THREE.Texture(tex.domElement);
+                        mat.map = new THREE.Texture(tex.domElement);
                     } else {
-//                        mat.map = THREE.ImageUtils.loadTexture(_modelPath+mqoMat.tex);
+                        mat.map = THREE.ImageUtils.loadTexture(_modelPath+mqoMat.tex);
                     }
                 }
                 if (mqoMat.aplane) {
                     var tex = phina.asset.AssetManager.get("image", mqoMat.aplane);
                     if (tex) {
-//                        mat.alphaMap = new THREE.Texture(tex.domElement);
+                        mat.alphaMap = new THREE.Texture(tex.domElement);
                     } else {
-//                        mat.alphaMap = THREE.ImageUtils.loadTexture(_modelPath+mqoMat.aplane);
+                        mat.alphaMap = THREE.ImageUtils.loadTexture(_modelPath+mqoMat.aplane);
                     }
                 }
                 mat.transparent = true;
