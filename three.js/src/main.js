@@ -12,7 +12,7 @@ phina.define('MainScene', {
       width: SCREEN_WIDTH,
       height: SCREEN_HEIGHT
     }).addChildTo(this);
-    layer.renderer.setClearColor(0x000000);
+    layer.renderer.setClearColor(0x8080B0);
     layer.scene.remove(layer.light);
 
     //カメラ位置の変更
@@ -69,17 +69,12 @@ phina.main(function() {
     assets: {
       image: {
         'hiyoko': 'assets/hiyoco_nomal_full.png',
-        'gradriel_alpha.bmp': 'https://rawgit.com/minimo/phina.js_advent_20151221/master/three.js/assets/gradriel_alpha.bmp',
         'gradriel_tex.bmp': 'https://rawgit.com/minimo/phina.js_advent_20151221/master/three.js/assets/gradriel_tex.bmp',
+        'gradriel_alpha.bmp': 'https://rawgit.com/minimo/phina.js_advent_20151221/master/three.js/assets/gradriel_alpha.bmp',
       },
       mqo: {
-        'gradriel': 'https://rawgit.com/minimo/phina.js_advent_20151221/master/three.js/assets/gradriel_pose.mqo',
-      },
-      mmd: {
-        'miku': {
-            pmd: 'assets/pmd/miku_v2.pmd',
-            vmd: 'assets/vmd/wavefile_v2.vmd',
-        },
+//        'gradriel': 'https://rawgit.com/minimo/phina.js_advent_20151221/master/three.js/assets/gradriel_pose.mqo',
+        'gradriel': 'assets/gradriel_pose.mqo',
       },
     },
     startLabel: 'main',
