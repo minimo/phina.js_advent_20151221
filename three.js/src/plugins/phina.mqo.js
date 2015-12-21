@@ -197,10 +197,20 @@ phina.namespace(function() {
                 if (mat.ambient) mat.ambient.setRGB(r*mqoMat.amb, g*mqoMat.amb, b*mqoMat.amb);
                 if (mat.specular) mat.specular.setRGB(r*mqoMat.spc, g*mqoMat.spc, b*mqoMat.spc);
                 if (mqoMat.tex) {
-                    mat.map = THREE.ImageUtils.loadTexture(_modelPath+mqoMat.tex);
+                    var tex = phina.asset.AssetManager.get("image", mqoMat.tex).domElement;
+                    if (tex) {
+                        mat.map = tex;
+                    } else {
+                        mat.map = THREE.ImageUtils.loadTexture(_modelPath+mqoMat.tex);
+                    }
                 }
                 if (mqoMat.aplane) {
-                    mat.alphaMap = THREE.ImageUtils.loadTexture(_modelPath+mqoMat.aplane);
+                    var tex = phina.asset.AssetManager.get("image", mqoMat.aplane).domElement;
+                    if (tex) {
+                        mat.alphaMap = tex;
+                    } else {
+                        mat.alphaMap = THREE.ImageUtils.loadTexture(_modelPath+mqoMat.aplane);
+                    }
                 }
                 mat.transparent = true;
                 mat.shiness = mqoMat.power;
