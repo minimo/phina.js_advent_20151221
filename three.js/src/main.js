@@ -71,7 +71,7 @@ phina.main(function() {
         'hiyoko': 'assets/hiyoco_nomal_full.png',
       },
       mqo: {
-        'gradriel': 'assets/gradriel_pose.mqo',
+        'gradriel': 'https://rawgit.com/minimo/phina.js_advent_20151221/master/three.js/assets/gradriel_pose.mqo',
       },
       mmd: {
         'miku': {

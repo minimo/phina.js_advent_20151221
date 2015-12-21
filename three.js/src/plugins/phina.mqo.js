@@ -16,7 +16,9 @@ phina.namespace(function() {
             var modelurl = this.src.split("/");
             this.modelPath = "";
             for (var i = 0, len = modelurl.length; i < len-1; i++) {
-                this.modelPath += modelurl[i];
+                if (modelurl[i] == 'http:') modelurl[i] += '/';
+                if (modelurl[i] == 'https:') modelurl[i]+'/';
+                this.modelPath += modelurl[i]+'/';
             }
 
             var that = this;
@@ -195,10 +197,10 @@ phina.namespace(function() {
                 if (mat.ambient) mat.ambient.setRGB(r*mqoMat.amb, g*mqoMat.amb, b*mqoMat.amb);
                 if (mat.specular) mat.specular.setRGB(r*mqoMat.spc, g*mqoMat.spc, b*mqoMat.spc);
                 if (mqoMat.tex) {
-                    mat.map = THREE.ImageUtils.loadTexture(_modelPath+"/"+mqoMat.tex);
+                    mat.map = THREE.ImageUtils.loadTexture(_modelPath+mqoMat.tex);
                 }
                 if (mqoMat.aplane) {
-                    mat.alphaMap = THREE.ImageUtils.loadTexture(_modelPath+"/"+mqoMat.aplane);
+                    mat.alphaMap = THREE.ImageUtils.loadTexture(_modelPath+mqoMat.aplane);
                 }
                 mat.transparent = true;
                 mat.shiness = mqoMat.power;
@@ -381,10 +383,10 @@ phina.namespace(function() {
                 if (mat.ambient) mat.ambientColor = new Vector3(r*mqoMat.amb, g*mqoMat.amb, b*mqoMat.amb);
                 if (mat.specular) mat.specularColor = new Vector3(r*mqoMat.spc, g*mqoMat.spc, b*mqoMat.spc);
                 if (mqoMat.tex) {
-//                    mat.map = THREE.ImageUtils.loadTexture(_modelPath+"/"+mqoMat.tex);
+//                    mat.map = THREE.ImageUtils.loadTexture(_modelPath+mqoMat.tex);
                 }
                 if (mqoMat.aplane) {
-//                    mat.alphaMap = THREE.ImageUtils.loadTexture(_modelPath+"/"+mqoMat.aplane);
+//                    mat.alphaMap = THREE.ImageUtils.loadTexture(_modelPath+mqoMat.aplane);
                 }
             } else {
                 //デフォルトマテリアル
