@@ -69,8 +69,11 @@ phina.main(function() {
     assets: {
       image: {
         'hiyoko': 'assets/hiyoco_nomal_full.png',
+        'gradriel_tex.bmp': 'https://rawgit.com/minimo/phina.js_advent_20151221/master/three.js/assets/gradriel_tex.bmp',
+        'gradriel_alpha.bmp': 'https://rawgit.com/minimo/phina.js_advent_20151221/master/three.js/assets/gradriel_alpha.bmp',
       },
       mqo: {
+//        'gradriel': 'https://rawgit.com/minimo/phina.js_advent_20151221/master/three.js/assets/gradriel_pose.mqo',
         'gradriel': 'assets/gradriel_pose.mqo',
       },
     },
